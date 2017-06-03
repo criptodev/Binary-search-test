@@ -12,12 +12,12 @@ for (var j = lastNum; j > 0; j--) {
     var rightCh = 2 * i + 2;
     //swap numbers to put the higher at first position in the array
     if (myArray[i] < myArray[leftCh]) {
-      var tempFather = myArray[i]
+      var tempFather = myArray[i];
           myArray[i] = myArray[leftCh];
           myArray[leftCh] = tempFather;
     }
     if (myArray[i] < myArray[rightCh]) {
-      var tempFather2 = myArray[i]
+      var tempFather2 = myArray[i];
           myArray[i] = myArray[rightCh];
           myArray[rightCh] = tempFather2;
     }
@@ -26,4 +26,5 @@ for (var j = lastNum; j > 0; j--) {
   var tempHigh = myArray[0];
       myArray[0] = myArray[j];
       myArray[j] = tempHigh;
+      console.log(myArray);
 }
