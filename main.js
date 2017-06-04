@@ -1,10 +1,10 @@
 //Given a number search in on array, and if is onordered(the array), order the array first.
 //array example:
-var myArray = [3, 5, 2];//, 8, 0.5];
+var myArray = [5, 8, 3, 2, 4, 100, 1500, 1, 0, 18];
+var newArray = [];
 //formule:
 var lastNum = myArray.length - 1;
 for (var j = lastNum; j > 0; j--) {
-  console.log(j);
   //cicle to find the higher number, "i" start with the father formule
   for(var i = Math.floor((j - 1) / 2); i >= 0; i--){
     //formule children
@@ -22,9 +22,9 @@ for (var j = lastNum; j > 0; j--) {
           myArray[rightCh] = tempFather2;
     }
   }
-  //swap the first number of the array with the last number
-  var tempHigh = myArray[0];
-      myArray[0] = myArray[j];
-      myArray[j] = tempHigh;
+  /*swap the first number of the array with the last number, for this method I use a new array
+  and delete the first array*/
+  newArray.unshift(myArray[0]);
+  myArray.shift();
 }
-console.log();
+console.log(newArray);
