@@ -1,11 +1,11 @@
 //Given a number search in on array, and if is onordered(the array), order the array first.
 //array example:
-var myArray = [4, 10, 15, 91, 61, 19, 157];//, 8, 0.5];
+var myArray = [3, 5, 2];//, 8, 0.5];
 //formule:
 var lastNum = myArray.length - 1;
 for (var j = lastNum; j > 0; j--) {
   console.log(j);
-  //cicle to find the higher number
+  //cicle to find the higher number, "i" start with the father formule
   for(var i = Math.floor((j - 1) / 2); i >= 0; i--){
     //formule children
     var leftCh = 2 * i + 1;
@@ -26,5 +26,5 @@ for (var j = lastNum; j > 0; j--) {
   var tempHigh = myArray[0];
       myArray[0] = myArray[j];
       myArray[j] = tempHigh;
-      console.log(myArray);
 }
+console.log();
